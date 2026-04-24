@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afyanalytics Platform Integration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AFYANALYTICS PLATFORM INTEGRATION</h1>
+            <p>External Platform Integration</p>
+        </div>
+
+        <div class="body">
+            <div class="info-card">
+                <h3>Platform Credentials</h3>
+                <div class="info-row">
+                    <span class="info-label">Platform Name:</span>
+                    <span class="info-value">{{ platform_name }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Platform Key:</span>
+                    <span class="info-value">{{ platform_key }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Expiry Limit:</span>
+                    <span class="info-value">15 minutes (900 seconds)</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Handshake Flow:</span>
+                    <span class="info-value">Initiate -> Token -> Complete -> Access Token</span>
+                </div>
+            </div>
+
+            <button id="handshakeBtn" class="handshake-btn" onclick="runHandshake()">
+                Run Handshake
+            </button>
+
+            <div id="resultContainer"></div>
+
+            <div class="log-container">
+                <div class="log-header">Request & Response Log</div>
+                <div id="log" class="log-content">
+                    <div class="log-entry log-info">Ready to start handshake...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>
