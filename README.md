@@ -11,14 +11,14 @@ A simple Flask application that integrates with the Afyanalytics Health Platform
 ### Installation
 
 # Clone repository
-git clone https://github.com/NicherKE/Afyanalytics_Platform_Intergration.git
-cd Afyanalytics_Platform_Intergration
+```git clone https://github.com/NicherKE/Afyanalytics_Platform_Intergration.git```
+```cd Afyanalytics_Platform_Intergration```
 
 # Install dependencies
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 # Run application
-python app.py
+```python app.py```
 
 
 Open `http://localhost:5000` in browser.
